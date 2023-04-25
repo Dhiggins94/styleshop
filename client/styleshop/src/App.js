@@ -4,9 +4,11 @@ import Products from "./pages/Products/Products";
 import Product from "./pages/Product/Product";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import "./app.scss"
 
 const Layout = () => {
   return (
+    // we use app scss to remove the default text decoration thats there
     <div className="app">
       <Navbar />
       <Outlet />

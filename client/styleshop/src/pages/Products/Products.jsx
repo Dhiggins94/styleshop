@@ -3,7 +3,7 @@ import "./Products.scss";
 import List from "../../components/List/List";
 import { useParams } from "react-router-dom";
 const Products = () => {
-  //  to fetch data using our category ID, using react router dom's useparams
+  //  to fetch data using our category ID, using react router dom's useparams, we use parseInt since our id is in object as a String instead of a number.
   const catId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState(null);
@@ -26,6 +26,7 @@ const Products = () => {
             <label htmlFor="3">Hats</label>
           </div>
         </div>
+        {/* this handles the filtering */}
         <div className="filterItem">
           <h2>Filter by Price</h2>
           <div className="inputItem">

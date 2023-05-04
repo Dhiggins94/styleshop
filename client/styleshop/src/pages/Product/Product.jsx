@@ -34,13 +34,14 @@ const Product = () => {
           consectetur adipiscing elit duis tristique sollicitudin nibh sit.{" "}
         </p>
         <div className="quantity">
+          {/* this exisit so anytime we press the minus button beyond one it stays at 1 via the teneary operator. so it takes into account if the previous value was 1 to keep it and if not make the prev value - 1 if its higher so it doesnt dip below zero */}
           <button
             onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}
           >
             -
           </button>
           {quantity}
-          <button onClick={() => setQuantity((prev) => prev - 1)}>+</button>
+          <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
         </div>
         <button className="add">
           <AddShoppingCartIcon />

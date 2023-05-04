@@ -1,22 +1,22 @@
-.categories{
+.categories {
   display: flex;
   height: 80vh;
   gap: 10px;
   margin: 10px;
 
-  .col{
+  .col {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  .col-l{
-    flex:2;
+  .col-l {
+    flex: 2;
   }
 
   .row{
-    flex: 1;
+    flex:1;
     display: flex;
     gap: 10px;
     position: relative;
@@ -28,7 +28,7 @@
       width: fit-content;
       height: 50px;
       padding: 10px;
-      top:0;
+      top: 0;
       bottom: 0;
       left: 0;
       right: 0;

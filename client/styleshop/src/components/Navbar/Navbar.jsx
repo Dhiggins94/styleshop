@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.scss";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import SearchIcon from "@mui/icons-material/Search";
@@ -6,8 +6,11 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
+import Cart from "../Cart/Cart";
 
 const Navbar = () => {
+  // for opening and closing the cart
+  const [open,setOpen] = useState(false)
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -70,13 +73,16 @@ const Navbar = () => {
             <PersonOutlineIcon />
             <FavoriteBorderOutlinedIcon />
             {/* SHOWS ICON ON THE CART */}
-            <div className="cartIcon">
+            {/* when clicked will check if the cart open and if its not, it will not open it, if it does will show cart component down below */}
+            <div className="cartIcon" onClick={()=>setOpen(!open)}>
               <ShoppingCartOutlinedIcon />
               <span>0</span>
             </div>
           </div>
         </div>
       </div>
+      {/* opens and shows the cart component */}
+      {open && <Cart/>}
     </div>
   );
 };

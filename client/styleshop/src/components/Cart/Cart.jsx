@@ -1,13 +1,13 @@
 import React from "react";
 import "./Cart.scss";
-import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 const Cart = () => {
   const data = [
     {
       id: 1,
       img: "https://images.pexels.com/photos/8498312/pexels-photo-8498312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       img2: "https://images.pexels.com/photos/8498314/pexels-photo-8498314.jpeg",
-      desc:"Yellow suit",
+      desc: "Yellow suit",
       title: "Suit",
       isNew: true,
       oldPrice: 19,
@@ -17,7 +17,7 @@ const Cart = () => {
       id: 2,
       img: "https://images.pexels.com/photos/14917974/pexels-photo-14917974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       img2: "https://images.pexels.com/photos/14917972/pexels-photo-14917972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      desc:"Gray hat",
+      desc: "Gray hat",
       title: "Hat",
       isNew: true,
       oldPrice: 19,
@@ -27,15 +27,16 @@ const Cart = () => {
   return (
     <div className="cart">
       <h1>Products in your cart</h1>
-      {data?.map(item => (
+      {data?.map((item) => (
         <div className="item" key={item.id}>
-        <img src={item.img} alt="" />
+          <img src={item.img} alt="" />
           <div className="details">
             <h1>{item.title}</h1>
+            {/* the substring is for limiting character usage up to 100 for the paragraph */}
             <p>{item.desc?.substring(0, 100)}</p>
             <div className="price">1x${item.price}</div>
           </div>
-          <DeleteOutlinedIcon className="delete"/>
+          <DeleteOutlinedIcon className="delete" />
         </div>
       ))}
       <div className="total">

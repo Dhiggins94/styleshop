@@ -46,6 +46,26 @@ const FeaturedProducts = ({ type }) => {
 
   const [products, setProducts] = useState([]);
 
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const data = await axios.get(process.env.REACT_APP_API_URL+"/products", {
+          headers: { Authorization: "bearer " + process.env.REACT_APP_API_TOKEN }
+        });
+        console.log(data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getData();
+},[])
+
+
+
+
+
+
   return (
     <div className="featuredProducts">
       <div className="top">

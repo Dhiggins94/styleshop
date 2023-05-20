@@ -7,10 +7,13 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
 import Cart from "../Cart/Cart";
-
+import { useSelector } from "react-redux";
 const Navbar = () => {
   // for opening and closing the cart
-  const [open,setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  // updating the changes in the cart
+  const products = useSelector((state) => state.cart.products);
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -74,15 +77,16 @@ const Navbar = () => {
             <FavoriteBorderOutlinedIcon />
             {/* SHOWS ICON ON THE CART */}
             {/* when clicked will check if the cart open and if its not, it will not open it, if it does will show cart component down below */}
-            <div className="cartIcon" onClick={()=>setOpen(!open)}>
+            <div className="cartIcon" onClick={() => setOpen(!open)}>
               <ShoppingCartOutlinedIcon />
-              <span>0</span>
+              {/* will show changes in  the cart but checking the products length */}
+              <span>{products.length}</span>
             </div>
           </div>
         </div>
       </div>
       {/* opens and shows the cart component */}
-      {open && <Cart/>}
+      {open && <Cart />}
     </div>
   );
 };

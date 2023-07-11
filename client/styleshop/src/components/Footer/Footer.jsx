@@ -24,19 +24,13 @@ const Footer = () => {
         <div className="item">
           <h1>About</h1>
           <span>
-            Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit
-            amet conse ctetur adipisicing elit, seddo eiusmod tempor incididunt
-            ut labore etdolore.
+          Our store offers a selection of fashionable and comfortable activewear that can enhance your wardrobe. We invite you to explore our collection and discover the perfect pieces to complement your active lifestyle. Whether you are seeking high-performance gear or stylish athleisure wear, we are confident that our selection will meet your needs. Upgrade your wardrobe today with our premium activewear collection.
           </span>
         </div>
         <div className="item">
           <h1>Contact</h1>
           <span>
-            Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit
-            amet conse ctetur adipisicing elit, seddo eiusmod tempor incididunt
-            ut labore etdolore.
+          If you have any questions or concerns about our activewear collection, we are always here to help. Please don't hesitate to contact us through our website or reach out to us via email at styleshop@gmail.com. We are committed to providing excellent customer service and ensuring that your shopping experience with us is a positive one. Thank you for choosing our store for your activewear needs.
           </span>
         </div>
       </div>

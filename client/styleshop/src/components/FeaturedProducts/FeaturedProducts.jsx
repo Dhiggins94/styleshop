@@ -13,11 +13,7 @@ const FeaturedProducts = ({ type }) => {
       <div className="top">
         <h1>{type} products</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-          lacus vel facilisis labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas.
+        Take a look at our newest activewear collection that blends style and comfort flawlessly. Our variety includes moisture-wicking materials, stretchy fabrics, adjustable waistbands, pockets, and reflective accents, so you can stay fashionable while feeling comfortable throughout your workouts. Check out our trending and featured clothing items today to upgrade your activewear.
         </p>
       </div>
       <div className="bottom">

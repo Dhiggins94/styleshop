@@ -1,15 +1,15 @@
 services:
   - type: web
-    name: strapi-api
+    name: strapi-store-api
     env: docker
     dockerfilePath: ./Dockerfile
     plan: starter
-    region: ohio
+    region: oregon
     buildCommand: yarn install && yarn build
     startCommand: yarn start
     healthCheckPath: /_health
     disk:
-      name: strapi-api-uploads
+      name: strapi-store-api-uploads
       mountPath: /opt/render/project/src/public/uploads
       sizeGB: 1
     envVars:
@@ -19,7 +19,7 @@ services:
         value: development
       - key: DATABASE_URL
         fromDatabase:
-          name: strapi-api
+          name: strapi-store-api
           property: connectionString
       - key: JWT_SECRET
         generateValue: true
@@ -31,5 +31,5 @@ services:
         generateValue: true
 
 databases:
-  - name: strapi-api
+  - name: strapi-store-api
     plan: starter

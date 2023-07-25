@@ -14,8 +14,6 @@
     "@strapi/plugin-users-permissions": "4.10.2",
     "@strapi/strapi": "4.10.2",
     "mysql": "2.18.1",
-    "pg": "^8.11.1",
-    "pg-connection-string": "^2.6.1",
     "stripe": "^12.6.0"
   },
   "author": {
